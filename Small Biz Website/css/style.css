@@ -1,5 +1,85 @@
 /* css Style Sheet for Crazy Bob */
+
+/*Global Style */
 body{
     background-color: antiquewhite;
+    margin:0; 
+    padding:0;
 }
+
+div#container{
+    background-color:bisque;
+    width:1024px;
+    /* Centers the Container */
+    margin:auto;
+}
+
+header{
+    background-color:tan;
+    width:100%;
+    height:150px;
+    margin:0;
+}
+
+header h1{
+    text-align: center;
+    padding-top: 50px;
+    color:cornsilk;
+    text-shadow:1px 1px 1px black;
+    margin:0;
+}
+
+nav{
+    width:100%;
+    background-color:brown;
+    clear:both;
+    margin:0;
+    color:white;
+}
+
+nav ul{
+    margin:0;
+    padding:0;
+    list-style: none;
+    overflow:hidden;
+}
+
+nav ul li{
+    float:left;
+}
+
+nav ul li a{
+    display: block;
+    color:white;
+    text-align: center;
+    text-decoration:none;
+    padding:14px 16px;
+}
+
+nav ul li a:hover{
+    background-color: rosybrown;
+}
+
+.active{
+    background-color: indianred;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
