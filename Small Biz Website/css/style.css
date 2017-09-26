@@ -64,6 +64,58 @@ nav ul li a:hover{
     background-color: indianred;
 }
 
+footer{
+    width:100%;
+    background-color: indianred;
+    color: white;
+    text-align: center;
+    margin:20px 1;
+    border: dotted;
+    
+}
+
+.keepOpen{
+    clear:both;
+}
+
+/*index.html*/
+img#home-img{
+    width:400px;
+    display:block;
+    margin:5px;
+    border: white dashed 10px; 
+    float:left;
+    margin-top: -15px
+}
+
+
+h2#h2-home{
+    float:left:
+}
+
+p#p-home{
+    float:left;
+    width:58%;
+}
+
+/*about.html*/
+img#bob_img{
+    width:400px;
+    display:block;
+    margin:5px;
+    border: white dashed 10px; 
+    float:left;
+}
+
+h2#h2-about{
+    float:left;
+}
+
+p#p-about{
+    float:left;
+    width:58%;
+}
+
 
 
 
