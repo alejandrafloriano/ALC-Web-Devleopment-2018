@@ -15,6 +15,8 @@ div#container{
 }
 
 header{
+    background-image: url('/images/studies-banner.jpg');
+    background-size:1200px;
     background-color:tan;
     width:100%;
     height:150px;
@@ -27,6 +29,14 @@ header h1{
     color:cornsilk;
     text-shadow:1px 1px 1px black;
     margin:0;
+    
+
+
+    font-family: 'Encode Sans Expanded', sans-serif;
+    font-family: 'Gilda Display', serif;
+    font-family: 'Kurale', serif;
+
+font-size: 60px;
 }
 
 nav{
@@ -85,17 +95,21 @@ img#home-img{
     margin:5px;
     border: white dashed 10px; 
     float:left;
-    margin-top: -15px
 }
 
 
 h2#h2-home{
-    float:left:
+    float:left;
+    margin-top:10px;
+    margin-bottom:0;
+    font-family: 'Gilda Display', serif;
 }
 
 p#p-home{
     float:left;
     width:58%;
+    margin-top:10px;
+    font-family: 'Encode Sans Expanded', sans-serif;
 }
 
 /*about.html*/
@@ -109,12 +123,19 @@ img#bob_img{
 
 h2#h2-about{
     float:left;
+    margin-top:10px;
+    margin-bottom: 0;
+    font-family: 'Gilda Display', serif;
 }
 
 p#p-about{
     float:left;
     width:58%;
+    margin-top:10px; 
+    font-family: 'Encode Sans Expanded', sans-serif;
 }
+
+/*about.html 2*/
 
 
 
