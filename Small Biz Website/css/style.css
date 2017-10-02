@@ -45,6 +45,9 @@ nav{
     clear:both;
     margin:0;
     color:white;
+    font-family:'monaco', sans-serif;
+    font-size: 17px;
+    box-shadow: 1px 1px 50px white;
 }
 
 nav ul{
@@ -135,11 +138,36 @@ p#p-about{
     font-family: 'Encode Sans Expanded', sans-serif;
 }
 
-/*about.html 2*/
+/*produce.html*/
+div#gallery{
+    width:100%;
+    border:3px dotted white;
+}
 
+figure{
+    width:250px;
+    float:left;
+    background-color: ghostwhite;
+    box-shadow:1px 1px 10px black;
+     background: -moz-linear-gradient(red, yellow); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#ffffff, cornsilk); /* Standard syntax */
+}
 
+figure img{
+    display:block;
+    width:200px;
+    margin:20px auto;
+    border:5px dashed indianred;
+}
 
-
+figcaption{
+    text-align:center;
+    padding:10px 0;
+    padding-bottom: 10px;
+    font-family:fantasy;
+    font-size: 18px;
+    border
+}
 
 
 
