@@ -5,6 +5,7 @@ body{
     background-color: antiquewhite;
     margin:0; 
     padding:0;
+    font-family: 'Encode Sans Expanded'
 }
 
 div#container{
@@ -175,8 +176,48 @@ p#p-produce{
     font-family: 'Encode Sans Expanded', sans-serif;
 }
 
+/*contact.html*/
 
+form{
+    float: left;
+}
 
+h2#h2-contact{
+    margin-left: 10px;
+    font-family: 'Gilda Display', sans-serif;
+    float: left;
+    clear:both;
+    width: 100%;
+        
+}
+
+form#form-contact{
+    margin-left: 10px;
+    font-family: 'Encode Sans Expanded', sans-serif;
+}
+
+form input{
+    margin-bottom: 10px;
+}
+
+button#button-contact{
+    width:100px;
+    height: 40px;
+    font-weight: 500;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-shadow: 1px 1px 4px #000;
+}
+
+div#map{
+    float:right;
+    margin-top: 0px;
+    margin-right: 20px;
+}
+
+div#map h2{
+    margin-top: 0px;
+}
 
 
 
