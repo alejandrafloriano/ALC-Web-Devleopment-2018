@@ -180,15 +180,15 @@ p#p-produce{
 
 form{
     float: left;
+    background-color: antiquewhite;
 }
 
 h2#h2-contact{
-    margin-left: 10px;
+    margin-left: 15px;
     font-family: 'Gilda Display', sans-serif;
     float: left;
     clear:both;
-    width: 100%;
-        
+    width: 100%;     
 }
 
 form#form-contact{
@@ -204,20 +204,41 @@ button#button-contact{
     width:100px;
     height: 40px;
     font-weight: 500;
+    font-size: 13px;
     margin-top: 15px;
     margin-bottom: 15px;
     box-shadow: 1px 1px 4px #000;
+    background-color: white;
+    color: indianred;
+    border-radius: 10px;
 }
+
 
 div#map{
     float:right;
     margin-top: 0px;
     margin-right: 20px;
+    border: dashed white 10px;
+    padding: 5px;
 }
 
 div#map h2{
     margin-top: 0px;
 }
+
+form#form-contact{
+    border: dashed white 10px;
+    padding: 5px;
+}
+
+h2#h2-map{
+    text-align: center;
+    padding: 5px;
+    background-color: brown;
+    border: outset indianred;
+}
+
+
 
 
 
