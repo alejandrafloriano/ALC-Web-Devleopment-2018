@@ -194,10 +194,17 @@ h2#h2-contact{
 form#form-contact{
     margin-left: 10px;
     font-family: 'Encode Sans Expanded', sans-serif;
+    margin-bottom: 10px;
 }
 
 form input{
     margin-bottom: 10px;
+    border: dashed indianred;
+}
+
+form textarea{
+    margin-bottom: 10px;
+    border: dashed indianred;
 }
 
 button#button-contact{
@@ -213,6 +220,10 @@ button#button-contact{
     border-radius: 10px;
 }
 
+button#button-contact:hover{
+    background-color: indianred;
+    color: white;
+}
 
 div#map{
     float:right;
@@ -220,6 +231,7 @@ div#map{
     margin-right: 20px;
     border: dashed white 10px;
     padding: 5px;
+    background-color: antiquewhite;
 }
 
 div#map h2{
