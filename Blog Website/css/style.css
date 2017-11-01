@@ -1,0 +1,28 @@
+/*Style for Alejandra's Blog website */
+
+/* Reset */
+html,body,div,h1,h2,h3,h4,h5,h6,p,ul,ol,li
+{
+    margin: 0;
+    padding: 0;
+}
+
+/* Universal Style */
+
+/* Element */
+body{
+    background-color: #000;
+}
+/* ID*/
+#container{
+    background-color: #b1d7e6; /* change to skyblue */
+    width:300px;
+}
+
+h1{
+    color: aliceblue;
+}
+
+p{
+    color:azure;
+}
