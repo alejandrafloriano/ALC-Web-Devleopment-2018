@@ -83,6 +83,13 @@ h5#post-stamp{
     color:aliceblue;
 }
 
+video#post-video{
+    width: auto;
+    height: auto;
+}
+
+
+
 footer{
     color:aliceblue;
 }
