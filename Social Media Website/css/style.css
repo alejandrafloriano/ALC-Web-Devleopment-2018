@@ -1,7 +1,7 @@
 /* Stylesheet for social media website */
 
 /*CSS RESET */
-html, body, div, header, h1, h2, h3, h4. h5, h6, nav, ul, ol, li, p, footer{
+html, body, div, header, h1, h2, h3, h4, h5, h6, nav, ul, ol, li, p, footer{
     margin: 0;
     padding: 0;
 }
@@ -14,11 +14,11 @@ body{
 div#container{
     display: flex;
     flex-flow: column;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
-    background-color: ghostwhite;
-    width: 80%;
+    background-color: #fcfcfc;
     max-width: 1024px;
+    width: 80%;
     margin: auto; 
 }
 
@@ -36,10 +36,44 @@ header img#profile_img{
     width: 200px;
     height: 200px;
     border-radius: 100%; 
-    background-color: ghostwhite;
+    background-color: #fcfcfc;
     align-self: flex-end;
+    margin-left: 16px;
+}
+
+header div#profile_info{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-self: flex-end;
+    margin-left: 32px;
+}
+
+div#profile_info h2{
+    width: 100%;
+    order; 1;
+    font-size: 2em;
+}
+
+div#profile_info h4{
+    width: 100%; 
+    order: 2;
+    font-size: 1em;
 }
 
 nav{
-    
+   background-color: lightyellow; 
+    order: 1;
+    width: 25%;
+    align-content: flex-start;
+}
+
+div#content{
+    width: 75%;
+    order: 2;
+}
+
+footer{
+    width: 100%;
+    order: 3;
 }
