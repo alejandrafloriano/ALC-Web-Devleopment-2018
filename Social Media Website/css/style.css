@@ -16,7 +16,7 @@ div#container{
     flex-flow: column;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color: #fcfcfc;
+    background-color: indianred;
     max-width: 1024px;
     width: 80%;
     margin: auto; 
@@ -26,7 +26,7 @@ header{
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    background-color: indianred;
+    background-color: #a74747;
     width: 100%;
     height:300px;
 }
@@ -64,16 +64,75 @@ div#profile_info h4{
 nav{
    background-color: lightyellow; 
     order: 1;
-    width: 25%;
+    width: 10%;
+    margin:10px 0 0 90px;
     align-content: flex-start;
 }
+
+nav ul{
+    list-style: none;
+}
+
+nav li{
+    
+}
+
+nav li a{
+    text-decoration: none;
+    font-family: sans-serif;
+    color:black;
+}
+
+
 
 div#content{
     width: 75%;
     order: 2;
 }
 
-footer{
-    width: 100%;
+div#content div.post{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin:8px auto;
+    width: 90%;
+    height: auto;
+    background-color: #fcfcfc;
+    box-shadow: 2px 2px 2px red;
+}
+
+div#content div.post img.ppp{
+    display: block;
+    order: 1;
+    margin: 6px;
+    background-color: lightyellow;
+    width: 90px;
+    height: 90px;
+    border: 100%;
+}
+
+div#content div.post h3.pnp{
+    order:2;
+    width: 60%;
+    height: 10%;
+    margin:6px;
+}
+
+div#content div.post p.time_stamp{
     order: 3;
+}
+
+div#content div.post h5.p_comments{
+    order:4;
+}
+
+div#content div.post h5.p_likes{
+    order:5;
+}
+
+footer{
+    background-color: #fcfcfc;
+    width: 100%;
+    order: 6;
 }
