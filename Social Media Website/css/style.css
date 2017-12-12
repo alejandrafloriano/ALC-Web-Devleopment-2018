@@ -99,7 +99,7 @@ div#content div.post{
     width: 90%;
     height: auto;
     background-color: #fcfcfc;
-    box-shadow: 2px 2px 2px red;
+    box-shadow: 2px 2px 2px #674141;
 }
 
 div#content div.post img.ppp{
@@ -112,27 +112,49 @@ div#content div.post img.ppp{
     border: 100%;
 }
 
-div#content div.post h3.pnp{
-    order:2;
-    width: 60%;
+div#content div.post_info{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    order: 2;
+    width: 80%;
+}
+
+div#content div.post div.post_info h3.pnp{
+    order:1;
+    width: 80%;
     height: 10%;
-    margin:6px;
+    margin: 6px;
 }
 
-div#content div.post p.time_stamp{
+div#content div.post div.post_info p.time_stamp{
+    order: 2;
+    font-size: 0.65em;
+    font-weight: 600;
+    color: black;
+    margin: 6px;
+}
+
+div#content div.post div.post_foot{
+    display: flex;
+    flex-direction: column;
     order: 3;
+    width: 100%; 
 }
 
-div#content div.post h5.p_comments{
-    order:4;
+div#content div.post div.post_foot h5.p_likes{
+    order: 1;
+    margin-left: 6px;
 }
 
-div#content div.post h5.p_likes{
-    order:5;
+div#content div.post div.post_foot h5.p_comments{
+    order: 2;
+    margin-left: 6px;
 }
+
 
 footer{
     background-color: #fcfcfc;
     width: 100%;
-    order: 6;
+    order: 4; /*3?*/
 }
