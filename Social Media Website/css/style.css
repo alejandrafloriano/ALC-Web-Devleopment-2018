@@ -5,10 +5,18 @@ html, body, div, header, h1, h2, h3, h4, h5, h6, nav, ul, ol, li, p, footer{
     margin: 0;
     padding: 0;
 }
+html{
+    min-height: 100%;
+}
 
 body{
     background-color: #ba5151;
     font-family: sans-serif;
+    background: #a90329;
+background: -moz-linear-gradient(top, #a90329 0%, #8f0222 50%, #870002 100%); 
+background: -webkit-linear-gradient(top, #a90329 0%,#8f0222 50%,#870002 100%); 
+background: linear-gradient(to bottom, #a90329 0%,#8f0222 50%,#870002 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c41b1e', endColorstr='#870002',GradientType=0 ); 
 }
 
 div#container{
@@ -158,3 +166,5 @@ footer{
     width: 100%;
     order: 4; /*3?*/
 }
+
+
