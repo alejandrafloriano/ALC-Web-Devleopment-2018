@@ -68,9 +68,8 @@ div#profile_info h4{
     order: 2;
     font-size: 1em;
 }
-
+/* Nav Start*/
 nav{
-   background-color: lightyellow; 
     order: 1;
     width: 10%;
     margin:10px 0 0 90px;
@@ -91,7 +90,10 @@ nav li a{
     color:black;
 }
 
-
+nav li a:hover{
+    color: lightyellow;
+}
+/* Nav End*/
 
 div#content{
     width: 75%;
@@ -150,21 +152,56 @@ div#content div.post div.post_foot{
     width: 100%; 
 }
 
-div#content div.post div.post_foot h5.p_likes{
+div#content div.post div.post_foot div.p_likes{
     order: 1;
-    margin-left: 6px;
+    margin: 6px;
+    color:gray;
 }
 
-div#content div.post div.post_foot h5.p_comments{
+div#content div.post div.post_foot div.p_likes .like{
+    width: 32px;
+}
+
+/* Comment Pic*/
+div#content div.post div.post_foot div.p_comments{
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
     order: 2;
-    margin-left: 6px;
+    margin: 6px;
 }
 
+/* Comment Title H5 */
+
+div#content div.post div.post_foot div.p_comments h5{
+    display: flex;
+    /*flex-grow: 1;*/
+    /*flex:1;*/
+    flex-wrap: wrap;
+    order: 1;
+}
+
+div#content div.post div.post_foot div.p_comments .com_pic{
+    display:flex;
+    border-radius:100px;
+    width:50px;
+    height: 50px;
+    order:2;
+}
+/* Comment Paragraph */
+div#content div.post div.post_foot div.p_comments .com_p{
+    order:3;
+}
 
 footer{
-    background-color: #fcfcfc;
-    width: 100%;
     order: 4; /*3?*/
+    background-color: indianred;
+    text-align: center;
+    width: 100%;
+    margin: 12px auto;
+    color:white;
 }
+
+/* EDIT THE LIKE SIZE */
 
 
