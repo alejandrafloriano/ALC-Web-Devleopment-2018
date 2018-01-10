@@ -35,8 +35,13 @@ header{
     flex-direction: row;
     justify-content: flex-start;
     background-color: #a74747;
+    background-image: url(../media/images/moneybin.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     width: 100%;
     height:300px;
+
 }
 
 header img#profile_img{
@@ -62,7 +67,7 @@ div#profile_info h2{
     order; 1;
     font-size: 2em;
 }
-
+/*change color*/
 div#profile_info h4{
     width: 100%; 
     order: 2;
@@ -72,8 +77,11 @@ div#profile_info h4{
 nav{
     order: 1;
     width: 10%;
-    margin:10px 0 0 90px;
+    margin:30px 0 0 30px;
     align-content: flex-start;
+    background-color: #a75050;
+    border: dashed #fcfcfc;
+    font-family: cursive;
 }
 
 nav ul{
@@ -81,7 +89,8 @@ nav ul{
 }
 
 nav li{
-    
+    margin-left: 15px;
+    margin-bottom: 10px;
 }
 
 nav li a{
@@ -145,6 +154,11 @@ div#content div.post div.post_info p.time_stamp{
     margin: 6px;
 }
 
+div#content div.post p.post_body{
+    order:3;
+    margin:6px 0;
+}
+
 div#content div.post div.post_foot{
     display: flex;
     flex-direction: column;
@@ -159,7 +173,8 @@ div#content div.post div.post_foot div.p_likes{
 }
 
 div#content div.post div.post_foot div.p_likes .like{
-    width: 32px;
+    width: 24px;
+    height: 24px;
 }
 
 /* Comment Pic*/
@@ -181,6 +196,10 @@ div#content div.post div.post_foot div.p_comments h5{
     order: 1;
 }
 
+div#content div.post div.post_foot div.p_comments h6{
+    order:3;
+}
+
 div#content div.post div.post_foot div.p_comments .com_pic{
     display:flex;
     border-radius:100px;
@@ -191,6 +210,8 @@ div#content div.post div.post_foot div.p_comments .com_pic{
 /* Comment Paragraph */
 div#content div.post div.post_foot div.p_comments .com_p{
     order:3;
+    margin: 6px;
+    margin-top: 16px;
 }
 
 footer{
