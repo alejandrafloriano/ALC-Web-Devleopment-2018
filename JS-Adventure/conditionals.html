@@ -6,14 +6,75 @@
     </head>
     <body>
         <script>
+            var bread = 0;
+            
+             Town();
+            
+            
+            function Town(){
+                var town = prompt("Welcome to a small town in some fanstasy land place! We have a butcher, baker, and candlestick maker, oh, and an inn.").toLocaleLowerCase();
+                
+                if(town == "inn"){
+                    Inn();
+                }
+                else if(town == "baker"){
+                    Baker();
+                }
+                else{
+                    Town();
+                }
+                function Inn(door){
+                var inn = prompt("Welcome to the Inn, traveler! What can I help you with?");
+                
+                }
+                
+                function Baker(){
+                    var baker = prompt("Top of the mornin' to ya! What can I get you? A loaf of bread, roll, pie, or cake?");
+                    
+                    if(baker == "exit"){
+                        Town();
+                    }
+                        else if(baker == "bread"){
+                            alert("Nice hot loaf of bread fer yee!");
+                            bread ++; 
+                            Baker();
+                        }
+                        else{
+                            alert("I dont have any " + baker);
+                            Baker();
+                        }
+                    }
+                
+         }
+            
+           
+            
+            
+            
+            
+            
 //            alert("Hey, Listen!");
 //            confirm("Do you want to go to the movies? As friends!!!");
 //            prompt("What is your favorite food?");
         
             
-            var favColor = prompt("What is your favorite color?").toLowerCase();
+            /*var favColor = prompt("What is your favorite color?").toLowerCase();
             
-            if(favColor == "blue") {
+            switch(favColor){
+                case "blue":
+                    alert("Yep! We get it, you like blue!");
+                    break;
+                case "green":
+                    alert("Yep! We get it, you like green!");
+                    break;
+                case "red":
+                    alert("Yep! We get it, you like red!");
+                    break;
+                default:
+                    alert("Whatcha talkin' about Willis?!");
+                    break;
+                           }*/
+           /* if(favColor == "blue") {
                 alert("The sky is blue! It is a wonderful color.");
             }
             else if(favColor == "red"){
@@ -35,11 +96,8 @@
                 alert("You have poor taste in color.");
             }
             
+            alert("Your favorite color is " + favColor);*/
             
-            
-            
-            
-            alert("Your favorite color is " + favColor);
             
         </script>
     </body>
