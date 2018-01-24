@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Adventure Game</title>
+    </head>
+    <body>
+        <h1>Adventure Game v0.1</h1>
+        <p>By Alex Martinez</p>
+        <script>
+            
+            Start();
+            
+            
+            function Start(){
+                var playerName = prompt("What is your name?","Player");
+                alert("Welcome to the World "+ playerName );
+                var beginAdv = confirm("Are you ready to begin your adventure?");
+                
+                if(beginAdv){
+                    Village();
+                }
+            else{
+                alert("You got a Game Over before it even started!");
+            }
+                
+         }
+            
+            function Village(){
+                var village = prompt("You wake up in your home village. There is a blacksmith.").toLocaleLowerCase();
+                
+                if(village == "blacksmith" || village == "go to blacksmith"){
+                    alert("The blacksmith is full of hot air.");
+                    Village();
+                }
+                else if(village == "inn" || village == "go to inn"){
+                    alert("You enter the inn and the innkeeper asks, 'What can I do for you? A room, food, a sit by the hearth fire?'");
+                    Village();
+                }
+                else if(village == "candyshop" || village == "go to candyshop"){
+                    alert("There is a sign attatched to the door that says 'Out to Lunch, will be back sometime.'");
+                    Village();
+                }
+                else if(village == "road" || village == "go to road"){
+                    Road();
+                }
+                else if
+                    alert("What? There is no " + village);
+                    Village();
+                
+            }
+            
+            function Road(){
+                var road = prompt("You begin to walk down the road, the african wilderness surrounds you. After half an hour you find someone else dowm the path next to a sign. He looks to be lost. The road keeps leading east. Do you wish to talk to the traveller, or move on?").toLocaleLowerCase;
+                
+                if(road == "talk" || "talk to traveller" || "traveller")
+                    alert("The duck looks relieved to see another person, he tells you about how he had fleed his town, and was seeking refuge. He doesn't mention why he left. He tells you his name is Flintheart Glomgold");
+                
+                var flintheart = prompt("Do you push him for more info, or leave it?");
+                
+                switch(flintheart){
+                    case "push for info":
+                            alert("Flintheart furrows his brows and glares at you, he doesn't seem to want to talk anymore.");
+                        break; 
+                    case "leave it":
+                        alert("Flintheart smiles, he appereciates the respect of his boundaries. You feel an attachment to the young man.");
+                        break;
+                        
+                    default:
+                        alert("Try again.")
+                        
+                        Road();
+                                 }
+
+            }
+            
+            
+            
+            
+            
+            
+        </script>
+    </body>
+
+</html>
