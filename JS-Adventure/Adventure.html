@@ -13,7 +13,7 @@
             
             function Start(){
                 var playerName = prompt("What is your name?","Player");
-                alert("Welcome to the World "+ playerName );
+                alert("Welcome to the World "+ playerName +"!" );
                 var beginAdv = confirm("Are you ready to begin your adventure?");
                 
                 if(beginAdv){
@@ -26,7 +26,7 @@
          }
             
             function Village(){
-                var village = prompt("You wake up in your home village. There is a blacksmith.").toLocaleLowerCase();
+                var village = prompt("You wake up in your home village. There is a blacksmith, a candyshop, and a road.").toLowerCase();
                 
                 if(village == "blacksmith" || village == "go to blacksmith"){
                     alert("The blacksmith is full of hot air.");
@@ -43,35 +43,54 @@
                 else if(village == "road" || village == "go to road"){
                     Road();
                 }
-                else if
+                else if(village)
                     alert("What? There is no " + village);
                     Village();
                 
             }
             
             function Road(){
-                var road = prompt("You begin to walk down the road, the african wilderness surrounds you. After half an hour you find someone else dowm the path next to a sign. He looks to be lost. The road keeps leading east. Do you wish to talk to the traveller, or move on?").toLocaleLowerCase;
+                var road = prompt("You begin to walk down the road, the african wilderness, loud and proud, surrounds you. After half an hour you find someone else dowm the path next to a sign. He looks to be lost. Do you talk to him, or move on?").toLowerCase();
                 
-                if(road == "talk" || "talk to traveller" || "traveller")
-                    alert("The duck looks relieved to see another person, he tells you about how he had fleed his town, and was seeking refuge. He doesn't mention why he left. He tells you his name is Flintheart Glomgold");
+                if(road == "talk" || "talk to traveller" || "traveller"){
+                    alert("The man looks relieved to see another person, he tells you about how he had fled his town, and was seeking refuge. He doesn't mention why he left.");
+                    
+                    var stranger = prompt("Do you push him for more info, or leave it?");
+                                
                 
-                var flintheart = prompt("Do you push him for more info, or leave it?");
-                
-                switch(flintheart){
+                switch(stranger){
                     case "push for info":
-                            alert("Flintheart furrows his brows and glares at you, he doesn't seem to want to talk anymore.");
+                            alert("The traveller furrows his brows and glares at you, he doesn't seem to want to talk anymore.");
+                        Town();
+                        
                         break; 
                     case "leave it":
-                        alert("Flintheart smiles, he appereciates the respect of his boundaries. You feel an attachment to the young man.");
+                        alert("The traveller smiles, he appereciates the respect of his boundaries. Deciding he can trust you, he tells you to beware the dangers in his town. 'Feel free to take stuff from in my chimney at my house, it's got a small statue in front of it.' You smile back in return, leaving eastward.");
+                        Town();
+                        
                         break;
                         
                     default:
-                        alert("Try again.")
+                        alert("Try again.");
                         
                         Road();
-                                 }
-
-            }
+                        break;
+                }
+                    }
+                else if(road == "move on"){
+                    Town();
+                }
+                else{
+                    alert("I dont understand " + road +".");
+                Road();
+                }
+                                 
+                    }
+            
+            function Town(){
+                    var town = prompt("You walk east to arrive at a small town, there seems to be a neighborhood of houses to the north, and a towncentral to the south.").toLowerCase();
+                    
+                }
             
             
             
