@@ -8,12 +8,46 @@
         <p>By Alex Martinez</p>
         <script>
             
+            
+            
+            var inventory = {
+                coins:100,
+                sword:0,
+                apples:0,
+                goldenKey:0,
+                goldNugget:0,
+                americanDime:0,
+                
+            }
+            
+            var player = {
+                firstname:"",
+                lastname: "",
+                gender:"",
+                age:"",
+                health:100,
+                score:0,
+            }
+            
+            var bandit = {
+                description:"A bandit with their entire body covered except for their evil eyes.",
+                damage:10,
+                health:30,
+            }
+            
+            
             Start();
             
             
             function Start(){
-                var playerName = prompt("What is your name?","Player");
-                alert("Welcome to the World "+ playerName +"!" );
+                player.firstname = prompt("What is your first name?","Player");
+                player.lastname = prompt("What is your last name?","LastName");
+                alert("Welcome to the World "+ player.firstname + " " + player.lastname + "\n" + player.age + "!" );
+                player.gender = prompt("Gender?");
+                player.age = prompt("How old are you?");
+                
+                
+                
                 var beginAdv = confirm("Are you ready to begin your adventure?");
                 
                 if(beginAdv){
@@ -29,8 +63,21 @@
                 var village = prompt("You wake up in your home village. There is a blacksmith, a candyshop, and a road.").toLowerCase();
                 
                 if(village == "blacksmith" || village == "go to blacksmith"){
-                    alert("The blacksmith is full of hot air.");
+                    var blacksmith = prompt("The blacksmith is full of hot air, the man behind the counter asks if you are looking for a sword. \np -Buy Sword").toLowerCase();
+                    
+                    if(blacksmith == "buy sword" && inventory.coins == 100){
+                        inventory.coins = inventory.coins - 100;
+                        inventory.sword = 1;
+                        alert("You bought a sword! \np Swords = " + inventory.sword + "\n Coins = " + inventory.coins);
+                        
+                    }
+                    
+                    else{
+                        alert("You don't have enough money for that!");
+                    }
                     Village();
+                    
+                    
                 }
                 else if(village == "inn" || village == "go to inn"){
                     alert("You enter the inn and the innkeeper asks, 'What can I do for you? A room, food, a sit by the hearth fire?'");
@@ -75,7 +122,7 @@
                         
                         Road();
                         break;
-                }
+                            }       
                     }
                 else if(road == "move on"){
                     Town();
