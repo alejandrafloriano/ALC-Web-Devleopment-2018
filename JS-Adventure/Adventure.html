@@ -97,7 +97,7 @@
             }
             
             function Road(){
-                var road = prompt("You begin to walk down the road, the african wilderness, loud and proud, surrounds you. After half an hour you find someone else dowm the path next to a sign. He looks to be lost. Do you talk to him, or move on?").toLowerCase();
+                var road = prompt("You begin to walk down the road, the african wilderness, loud and proud, surrounds you. After half an hour you find someone else dowm the path next to a sign. He looks to be lost.").toLowerCase();
                 
                 if(road == "talk" || "talk to traveller" || "traveller"){
                     alert("The man looks relieved to see another person, he tells you about how he had fled his town, and was seeking refuge. He doesn't mention why he left.");
@@ -124,9 +124,9 @@
                         break;
                             }       
                     }
-                else if(road == "move on"){
-                    Town();
-                }
+//                else if(road == "move on"){
+//                    Town();
+//                }
                 else{
                     alert("I dont understand " + road +".");
                 Road();
@@ -136,7 +136,44 @@
             
             function Town(){
                     var town = prompt("You walk east to arrive at a small town, there seems to be a neighborhood of houses to the north, and a towncentral to the south.").toLowerCase();
+                
+                if(town == "north" || town == "houses"){
+                    Neighborhood();
+                }
+                
+                else if(town == "south" || town == "towncentral"){
                     
+                }
+                
+                }
+                
+                function Neighborhood(){
+                    var neighborhood = prompt("You see a street of houses, look around, or leave?").toLowerCase();
+                    
+                    if(neighborhood == "look around" || neighborhood == "look"){
+                        prompt("There are a string of houses on ether side of the dirt road. One of the houses, which is red has a small statue infront of it, one of the other houses, which is blue is boarded up except for the door.")
+                            }
+                    if(neighborhood == "blue house"){
+                        prompt("You look inside the house from the door's window, sadly, you can't see much, as it is pitch black inside the house.")
+                        Neighborhood();
+                    }
+                    if(neighborhood == "leave"){
+                        Town();
+
+                    }
+                }
+            
+                function Towncentral(){
+                    var towncentral = promt("The town central is busy, stands are set up everywhere.")
+                    
+                    if(towncentral == "stands"){
+                        Towncentral();
+                    }
+                    
+                    else{
+                        alert("What?");
+                        Towncentral();
+                    }
                 }
             
             
