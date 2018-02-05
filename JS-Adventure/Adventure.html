@@ -13,11 +13,7 @@
             var inventory = {
                 coins:100,
                 sword:0,
-                apples:0,
-                goldenKey:0,
-                goldNugget:0,
-                americanDime:0,
-                
+                magicstaff:0,  
             }
             
             var player = {
@@ -43,8 +39,6 @@
                 player.firstname = prompt("What is your first name?","Player");
                 player.lastname = prompt("What is your last name?","LastName");
                 alert("Welcome to the World "+ player.firstname + " " + player.lastname + "\n" + player.age + "!" );
-                player.gender = prompt("Gender?");
-                player.age = prompt("How old are you?");
                 
                 
                 
@@ -139,12 +133,16 @@
                 
                 if(town == "north" || town == "houses"){
                     Neighborhood();
-                }
+                    }
                 
                 else if(town == "south" || town == "towncentral"){
-                    
-                }
+                    Towncentral();
+                    }
                 
+                else if(town){
+                    alert("I dont understand.")
+                    Town();
+                    }
                 }
                 
                 function Neighborhood(){
@@ -153,27 +151,59 @@
                     if(neighborhood == "look around" || neighborhood == "look"){
                         prompt("There are a string of houses on ether side of the dirt road. One of the houses, which is red has a small statue infront of it, one of the other houses, which is blue is boarded up except for the door.")
                             }
-                    if(neighborhood == "blue house"){
-                        prompt("You look inside the house from the door's window, sadly, you can't see much, as it is pitch black inside the house.")
-                        Neighborhood();
+                    else if(neighborhood == "blue house"){
+                        BlueHouse();
                     }
-                    if(neighborhood == "leave"){
+                    else if(neighborhood == "leave"){
                         Town();
-
+                    }
+                    else if(neighborhood){
+                        alert("I dont understand.")
+                        Neighborhood();
                     }
                 }
             
+                function BlueHouse(){
+                    alert("You break into the blue house, as you stand in the darkness, something moves.");
+                    
+                    alert("You turn around quickly, but before you can react, someone clocks you on the head. You have died!");
+                }
+            
                 function Towncentral(){
-                    var towncentral = promt("The town central is busy, stands are set up everywhere.")
+                    var towncentral = prompt("The town central is busy, there are many people walking around. Stands are set up everywhere. The path leads through the middle, leading east. The path west leads back to the enterance of the town.").toLowerCase();
                     
                     if(towncentral == "stands"){
+                        alert("There are too many people to reach the stands.");
                         Towncentral();
+                    }
+                    
+                    if(towncentral == "east"){
+                        prompt("You reach an empty part of town, a forboding house is at the end of the walkway.");
+                //      put thing here
+                    }
+                    
+                    if(towncentral == "west"){
+                        Town();
                     }
                     
                     else{
                         alert("What?");
                         Towncentral();
                     }
+                }
+            
+                function HauntedHouse(){
+                    var hauntedhouse = prompt("You enter the house, it's dark inside, no signs of people are anywhere. There's a door.").toLowerCase();
+                    
+                    if(hauntedhouse == "door"){
+                        Door();
+                    }
+                }
+            
+                function Door(){
+                    var door = prompt("You open the door and see... A ghost! It starts floating tword you, you have no choice but to attack!").toLowerCase();
+                    
+                    
                 }
             
             
