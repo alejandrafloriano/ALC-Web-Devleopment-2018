@@ -19,8 +19,6 @@
             var player = {
                 firstname:"",
                 lastname: "",
-                gender:"",
-                age:"",
                 health:100,
                 score:0,
             }
@@ -38,7 +36,7 @@
             function Start(){
                 player.firstname = prompt("What is your first name?","Player");
                 player.lastname = prompt("What is your last name?","LastName");
-                alert("Welcome to the World "+ player.firstname + " " + player.lastname + "\n" + player.age + "!" );
+                alert("Welcome to the World "+ player.firstname + " " + player.lastname + "!" );
                 
                 
                 
@@ -91,9 +89,8 @@
             }
             
             function Road(){
-                var road = prompt("You begin to walk down the road, the african wilderness, loud and proud, surrounds you. After half an hour you find someone else dowm the path next to a sign. He looks to be lost.").toLowerCase();
+                var road = alert("You begin to walk down the road, the african wilderness, loud and proud, surrounds you. After half an hour you find someone else dowm the path next to a sign. He looks to be lost.");
                 
-                if(road == "talk" || "talk to traveller" || "traveller"){
                     alert("The man looks relieved to see another person, he tells you about how he had fled his town, and was seeking refuge. He doesn't mention why he left.");
                     
                     var stranger = prompt("Do you push him for more info, or leave it?");
@@ -118,15 +115,9 @@
                         break;
                             }       
                     }
-//                else if(road == "move on"){
-//                    Town();
-//                }
-                else{
-                    alert("I dont understand " + road +".");
-                Road();
-                }
+               
                                  
-                    }
+                    
             
             function Town(){
                     var town = prompt("You walk east to arrive at a small town, there seems to be a neighborhood of houses to the north, and a towncentral to the south.").toLowerCase();
@@ -140,7 +131,7 @@
                     }
                 
                 else if(town){
-                    alert("I dont understand.")
+                    alert("I dont understand.");
                     Town();
                     }
                 }
@@ -149,25 +140,37 @@
                     var neighborhood = prompt("You see a street of houses, look around, or leave?").toLowerCase();
                     
                     if(neighborhood == "look around" || neighborhood == "look"){
-                        prompt("There are a string of houses on ether side of the dirt road. One of the houses, which is red has a small statue infront of it, one of the other houses, which is blue is boarded up except for the door.")
-                            }
-                    else if(neighborhood == "blue house"){
+                        prompt("There are a string of houses on ether side of the dirt road. One of the houses, which is red has a small statue infront of it, one of the other houses, which is blue is boarded up except for the door.");
+                        
+                        if(neighborhood == "blue house" || neighborhood == "blue"){
                         BlueHouse();
+                            }
+                    
+                     
                     }
-                    else if(neighborhood == "leave"){
+                    
+                     if(neighborhood == "leave"){
                         Town();
                     }
-                    else if(neighborhood){
-                        alert("I dont understand.")
+                    
+                    else(neighborhood)
+                        alert("I dont understand.");
                         Neighborhood();
-                    }
+                    
                 }
             
                 function BlueHouse(){
                     alert("You break into the blue house, as you stand in the darkness, something moves.");
                     
                     alert("You turn around quickly, but before you can react, someone clocks you on the head. You have died!");
+                    
+                    Start();
                 }
+            
+            function RedHouse(){
+                alert("You go inside the red house, inside you find a Magic Staff!")
+                
+            }
             
                 function Towncentral(){
                     var towncentral = prompt("The town central is busy, there are many people walking around. Stands are set up everywhere. The path leads through the middle, leading east. The path west leads back to the enterance of the town.").toLowerCase();
@@ -178,8 +181,7 @@
                     }
                     
                     if(towncentral == "east"){
-                        prompt("You reach an empty part of town, a forboding house is at the end of the walkway.");
-                //      put thing here
+                        HHEnterance();
                     }
                     
                     if(towncentral == "west"){
@@ -191,12 +193,21 @@
                         Towncentral();
                     }
                 }
+                    
+                    function HHEnterance (){
+                        prompt("You reach an empty part of town, a forboding house is at the end of the walkway.").toLowerCase;
+                    }
             
                 function HauntedHouse(){
                     var hauntedhouse = prompt("You enter the house, it's dark inside, no signs of people are anywhere. There's a door.").toLowerCase();
                     
                     if(hauntedhouse == "door"){
                         Door();
+                        
+                        else{
+                            alert("I don't understand.");
+                            HauntedHouse();
+                        }
                     }
                 }
             
