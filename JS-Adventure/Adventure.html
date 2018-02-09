@@ -21,12 +21,18 @@
                 lastname: "",
                 health:100,
                 score:0,
+                stafflocation:0,
             }
             
             var bandit = {
                 description:"A bandit with their entire body covered except for their evil eyes.",
                 damage:10,
                 health:30,
+            }
+            
+            var invList = function(){
+                alert ("Coins = "+ inventory.coins +
+                      "\nSword = "+ inventory.sword);
             }
             
             
@@ -82,10 +88,16 @@
                 else if(village == "road" || village == "go to road"){
                     Road();
                 }
-                else if(village)
+                
+                else if(village =="inventory"||village == "inv"){
+                    invList();
+                    Village();
+                }
+                
+                else if(village){
                     alert("What? There is no " + village);
                     Village();
-                
+                }
             }
             
             function Road(){
@@ -104,6 +116,7 @@
                         break; 
                     case "leave it":
                         alert("The traveller smiles, he appereciates the respect of his boundaries. Deciding he can trust you, he tells you to beware the dangers in his town. 'Feel free to take stuff from in my chimney at my house, it's got a small statue in front of it.' You smile back in return, leaving eastward.");
+                        player.stafflocation = 1;
                         Town();
                         
                         break;
@@ -126,26 +139,23 @@
                     Neighborhood();
                     }
                 
-                else if(town == "south" || town == "towncentral"){
+                if(town == "south" || town == "towncentral"){
                     Towncentral();
                     }
                 
-                else if(town){
+                else(town)
                     alert("I dont understand.");
                     Town();
-                    }
+                    
                 }
                 
                 function Neighborhood(){
                     var neighborhood = prompt("You see a street of houses, look around, or leave?").toLowerCase();
                     
                     if(neighborhood == "look around" || neighborhood == "look"){
-                        prompt("There are a string of houses on ether side of the dirt road. One of the houses, which is red has a small statue infront of it, one of the other houses, which is blue is boarded up except for the door.");
+                        alert("There are a string of houses on ether side of the dirt road. One of the houses, which is red has a small statue infront of it, one of the other houses, which is blue is boarded up except for the door.");
                         
-                        if(neighborhood == "blue house" || neighborhood == "blue"){
-                        BlueHouse();
-                            }
-                    
+                        Neighborhood();
                      
                     }
                     
@@ -153,6 +163,14 @@
                         Town();
                     }
                     
+                    if(neighborhood == "blue house" || neighborhood == "blue"){
+                        BlueHouse();
+                    }
+                    
+                    if(neighborhood == "red house" || neighborhood == "red"){
+                        RedHouse();
+                    }
+                        
                     else(neighborhood)
                         alert("I dont understand.");
                         Neighborhood();
@@ -160,17 +178,27 @@
                 }
             
                 function BlueHouse(){
-                    alert("You break into the blue house, as you stand in the darkness, something moves.");
+                    var bluehouse = alert("You break into the blue house, as you stand in the darkness, something moves.");
                     
                     alert("You turn around quickly, but before you can react, someone clocks you on the head. You have died!");
-                    
-                    Start();
                 }
             
-            function RedHouse(){
-                alert("You go inside the red house, inside you find a Magic Staff!")
+            function RedHouse(){ 
+                var redhouse = alert("You go inside the red house, you look for supplies.");
+                if(player.stafflocation == 0){
+                    alert("Sadly, you found nothing.");
+                    Neighborhood();
+                    }
                 
-            }
+                
+                
+                else if(player.stafflocation == 1){
+                    inventory.magicstaff = 1;
+                    alert("You found a magic staff!");
+                    Neighborhood();
+                    }
+                }
+            
             
                 function Towncentral(){
                     var towncentral = prompt("The town central is busy, there are many people walking around. Stands are set up everywhere. The path leads through the middle, leading east. The path west leads back to the enterance of the town.").toLowerCase();
@@ -181,7 +209,7 @@
                     }
                     
                     if(towncentral == "east"){
-                        HHEnterance();
+                        Enterance();
                     }
                     
                     if(towncentral == "west"){
@@ -194,8 +222,17 @@
                     }
                 }
                     
-                    function HHEnterance (){
-                        prompt("You reach an empty part of town, a forboding house is at the end of the walkway.").toLowerCase;
+                    function Enterance(){
+                        var enterance = prompt("You reach an empty part of town, a forboding house is at the end of the walkway. You look behind you only to see that the gates have shut and you are trapped.").toLowerCase();
+                        
+                        if(enterance == "house"){
+                            HauntedHouse();
+                        }
+                        
+                        else if(enterance){
+                            alert("You can ony go to the house.");
+                            Enterance();
+                        }
                     }
             
                 function HauntedHouse(){
@@ -203,18 +240,29 @@
                     
                     if(hauntedhouse == "door"){
                         Door();
+                    }
                         
                         else{
                             alert("I don't understand.");
                             HauntedHouse();
                         }
                     }
-                }
+                
             
                 function Door(){
-                    var door = prompt("You open the door and see... A ghost! It starts floating tword you, you have no choice but to attack!").toLowerCase();
+                    var door = alert("You open the door and see... A ghost! It starts floating tword you, you have no choice but to attack!").toLowerCase();
                     
+                    if(inventory.magicstaff == 1){
+                        alert("With your magic staff, you manage to kill the ghost, the town is saved!");
+                    }
                     
+                    else if(inventory.sword == 1){
+                    alert("You try to swing your sword at the ghost, but nothing happens!");
+                        alert("The ghost kills you, Game Over!");
+                    }
+                    else if(inventrory.sword == 0){
+                        alert("You have nothing to attack with, the ghost kills you, Game Over!");
+                    }
                 }
             
             
