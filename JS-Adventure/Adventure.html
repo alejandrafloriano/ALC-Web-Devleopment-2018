@@ -71,7 +71,7 @@
                     }
                     
                     else{
-                        alert("You don't have enough money for that!");
+                        alert("You don't have enough money to buy anything!");
                     }
                     Village();
                     
@@ -139,7 +139,7 @@
                     Neighborhood();
                     }
                 
-                if(town == "south" || town == "towncentral"){
+               else if(town == "south" || town == "towncentral"){
                     Towncentral();
                     }
                 
@@ -159,15 +159,15 @@
                      
                     }
                     
-                     if(neighborhood == "leave"){
+                    else if(neighborhood == "leave" || neighborhood == "town"){
                         Town();
                     }
                     
-                    if(neighborhood == "blue house" || neighborhood == "blue"){
+                    else if(neighborhood == "blue house" || neighborhood == "blue"){
                         BlueHouse();
                     }
                     
-                    if(neighborhood == "red house" || neighborhood == "red"){
+                    else if(neighborhood == "red house" || neighborhood == "red"){
                         RedHouse();
                     }
                         
@@ -208,11 +208,11 @@
                         Towncentral();
                     }
                     
-                    if(towncentral == "east"){
+                    else if(towncentral == "east"){
                         Enterance();
                     }
                     
-                    if(towncentral == "west"){
+                    else if(towncentral == "west"){
                         Town();
                     }
                     
@@ -250,23 +250,35 @@
                 
             
                 function Door(){
-                    var door = alert("You open the door and see... A ghost! It starts floating tword you, you have no choice but to attack!").toLowerCase();
+                    var door = alert("You open the door and see... A ghost! It starts floating tword you, you have no choice but to attack!");
                     
                     if(inventory.magicstaff == 1){
-                        alert("With your magic staff, you manage to kill the ghost, the town is saved!");
+                        GoodEnding();
                     }
                     
                     else if(inventory.sword == 1){
-                    alert("You try to swing your sword at the ghost, but nothing happens!");
-                        alert("The ghost kills you, Game Over!");
+                        BadEndingOne();
                     }
-                    else if(inventrory.sword == 0){
-                        alert("You have nothing to attack with, the ghost kills you, Game Over!");
+                    
+                    else if(inventory.sword == 0){
+                        BadEndingTwo();
                     }
                 }
             
+            function GoodEnding(){
+               alert("With your magic staff, you manage to kill the ghost, the town is saved!");
+            }
             
+            function BadEndingOne(){
+               alert("You try to swing your sword at the ghost, but nothing happens!");
+                        alert("The ghost kills you, Game Over!");
+            }
             
+            function BadEndingTwo(){
+               alert("You have nothing to attack with, the ghost kills you, Game Over!");
+            }
+            
+       
             
             
             
