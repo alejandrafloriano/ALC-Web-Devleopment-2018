@@ -19,16 +19,9 @@
             var player = {
                 firstname:"",
                 lastname: "",
-                health:100,
-                score:0,
                 stafflocation:0,
             }
             
-            var bandit = {
-                description:"A bandit with their entire body covered except for their evil eyes.",
-                damage:10,
-                health:30,
-            }
             
             var invList = function(){
                 alert ("Coins = "+ inventory.coins +
@@ -43,7 +36,10 @@
                 player.firstname = prompt("What is your first name?","Player");
                 player.lastname = prompt("What is your last name?","LastName");
                 alert("Welcome to the World "+ player.firstname + " " + player.lastname + "!" );
-                
+                inventory.coins = 100;
+                inventory.sword = 0;
+                player.stafflocation = 0;
+                inventory.coins = 100;
                 
                 
                 var beginAdv = confirm("Are you ready to begin your adventure?");
@@ -58,25 +54,12 @@
          }
             
             function Village(){
-                var village = prompt("You wake up in your home village. There is a blacksmith, a candyshop, and a road.").toLowerCase();
+                var village = prompt("You are in your home village. There is a blacksmith, a candyshop, and a road. \n -Blacksmith \n -Candyshop \n -Road").toLowerCase();
                 
                 if(village == "blacksmith" || village == "go to blacksmith"){
-                    var blacksmith = prompt("The blacksmith is full of hot air, the man behind the counter asks if you are looking for a sword. \np -Buy Sword").toLowerCase();
-                    
-                    if(blacksmith == "buy sword" && inventory.coins == 100){
-                        inventory.coins = inventory.coins - 100;
-                        inventory.sword = 1;
-                        alert("You bought a sword! \np Swords = " + inventory.sword + "\n Coins = " + inventory.coins);
-                        
+                    Blacksmith();
                     }
-                    
-                    else{
-                        alert("You don't have enough money to buy anything!");
-                    }
-                    Village();
-                    
-                    
-                }
+                
                 else if(village == "inn" || village == "go to inn"){
                     alert("You enter the inn and the innkeeper asks, 'What can I do for you? A room, food, a sit by the hearth fire?'");
                     Village();
@@ -94,10 +77,36 @@
                     Village();
                 }
                 
-                else if(village){
+                else(village)
                     alert("What? There is no " + village);
                     Village();
-                }
+                
+            }
+            
+            function Blacksmith(){
+                 var blacksmith = prompt("The blacksmith is full of hot air, the man behind the counter asks if you are looking for a sword. \n -Buy Sword \n -Leave").toLowerCase();
+                    
+                    if(blacksmith == "buy sword" && inventory.coins == 100){
+                        inventory.coins = inventory.coins - 100;
+                        inventory.sword = 1;
+                        alert("You bought a sword! \n Swords = " + inventory.sword + "\n Coins = " + inventory.coins);
+                        Blacksmith();
+                    }
+                
+                if(blacksmith == "buy sword" && inventory.coins == 0){
+                        alert("You don't have enough money!");
+                        Blacksmith();
+                    }
+                
+                    if(blacksmith == "leave"){
+                        Village();
+                    }
+                    
+                    else{
+                        alert("I don't understand.");
+                    Blacksmith();
+                        }
+                    
             }
             
             function Road(){
@@ -105,7 +114,7 @@
                 
                     alert("The man looks relieved to see another person, he tells you about how he had fled his town, and was seeking refuge. He doesn't mention why he left.");
                     
-                    var stranger = prompt("Do you push him for more info, or leave it?");
+                    var stranger = prompt("Do you 'push for info', or 'leave it'?");
                                 
                 
                 switch(stranger){
@@ -133,9 +142,9 @@
                     
             
             function Town(){
-                    var town = prompt("You walk east to arrive at a small town, there seems to be a neighborhood of houses to the north, and a towncentral to the south.").toLowerCase();
+                    var town = prompt("You walk east to arrive at a small town, there seems to be a neighborhood of houses to the north, and a towncentral to the south. \n -North \n -South").toLowerCase();
                 
-                if(town == "north" || town == "houses"){
+                if(town == "north" || town == "houses" || town == "neighborhood"){
                     Neighborhood();
                     }
                 
@@ -150,10 +159,10 @@
                 }
                 
                 function Neighborhood(){
-                    var neighborhood = prompt("You see a street of houses, look around, or leave?").toLowerCase();
+                    var neighborhood = prompt("You see a street of houses. \n -Look Around \n -Leave").toLowerCase();
                     
                     if(neighborhood == "look around" || neighborhood == "look"){
-                        alert("There are a string of houses on ether side of the dirt road. One of the houses, which is red has a small statue infront of it, one of the other houses, which is blue is boarded up except for the door.");
+                        alert("There are a string of houses on ether side of the dirt road. One of the houses, which is red has a small statue infront of it, one of the other houses, which is blue is boarded up except for the door. \n (You may use \n -Red House \n -Blue House)");
                         
                         Neighborhood();
                      
@@ -181,6 +190,8 @@
                     var bluehouse = alert("You break into the blue house, as you stand in the darkness, something moves.");
                     
                     alert("You turn around quickly, but before you can react, someone clocks you on the head. You have died!");
+                    
+                    Start();
                 }
             
             function RedHouse(){ 
@@ -201,7 +212,7 @@
             
             
                 function Towncentral(){
-                    var towncentral = prompt("The town central is busy, there are many people walking around. Stands are set up everywhere. The path leads through the middle, leading east. The path west leads back to the enterance of the town.").toLowerCase();
+                    var towncentral = prompt("The town central is busy, there are many people walking around. Stands are set up everywhere. The path leads through the middle, leading east. The path north leads back to the enterance of the town. \n -Stands \n -East \n -North").toLowerCase();
                     
                     if(towncentral == "stands"){
                         alert("There are too many people to reach the stands.");
@@ -212,7 +223,7 @@
                         Enterance();
                     }
                     
-                    else if(towncentral == "west"){
+                    else if(towncentral == "north"){
                         Town();
                     }
                     
@@ -223,27 +234,27 @@
                 }
                     
                     function Enterance(){
-                        var enterance = prompt("You reach an empty part of town, a forboding house is at the end of the walkway. You look behind you only to see that the gates have shut and you are trapped.").toLowerCase();
+                        var enterance = prompt("You reach an empty part of town, a forboding house is at the end of the walkway. You look behind you only to see that the gates have shut and you are trapped. \n -House").toLowerCase();
                         
                         if(enterance == "house"){
                             HauntedHouse();
                         }
                         
-                        else if(enterance){
+                        else (enterance)
                             alert("You can ony go to the house.");
                             Enterance();
-                        }
+                        
                     }
             
                 function HauntedHouse(){
-                    var hauntedhouse = prompt("You enter the house, it's dark inside, no signs of people are anywhere. There's a door.").toLowerCase();
+                    var hauntedhouse = prompt("You enter the house, it's dark inside, no signs of people are anywhere. There's a door. \n -Door").toLowerCase();
                     
                     if(hauntedhouse == "door"){
                         Door();
                     }
                         
                         else{
-                            alert("I don't understand.");
+                            alert("There's only a door.");
                             HauntedHouse();
                         }
                     }
@@ -267,15 +278,19 @@
             
             function GoodEnding(){
                alert("With your magic staff, you manage to kill the ghost, the town is saved!");
+                Start();
             }
             
             function BadEndingOne(){
                alert("You try to swing your sword at the ghost, but nothing happens!");
                         alert("The ghost kills you, Game Over!");
+                Start();
             }
             
             function BadEndingTwo(){
                alert("You have nothing to attack with, the ghost kills you, Game Over!");
+                
+                Start();
             }
             
        
