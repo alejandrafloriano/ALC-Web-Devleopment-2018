@@ -15,15 +15,18 @@ function mOut(obj) {
 }
 </script>
     
-<div onmousedown="mDown(this)" onmouseup="mUp(this)" style="background-color: blue;width: 90px;height: 20px;padding: 40px;">Click Me!</div>
+<div onmousedown="mDown(this)" onmouseup="mUp(this)" style="background-color:#4682B4;width: 90px;height: 20px;padding: 40px;">Click Me!</div>
     
 <script>
 function mDown(obj) {
     obj.style.backgroundColor = "lightblue";
     obj.innerHTML = "Release Me";
-}   
+}  
     
-    function
+function mUp(obj) {
+    obj.style.backgroundColor="#4682B4"
+    obj.innerHTML="Thank You";
+}
 </script>
     
 </body>
