@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" type="type/css" href="../css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
     <title>Color Changer</title>
 </head>
 <body>
@@ -35,6 +35,11 @@
                <label>
                <input type="radio" name="colors" onclick="Preview()" value="#4CAF50"/>
                    <div class="box green500"></div>
+               </label>
+               
+               <label>
+               <input type="radio" name="colors" onclick="Preview()" value="#2196F3"/>
+                   <div class="box blue500"></div>
                </label>
                
                <label>
@@ -83,6 +88,55 @@
       </div>
     </div>
 
+    
+    <script>
+        
+        var modal = document.getElementById("modal");
+
+        var changeBtn = document.getElementById("change");
+
+        var preview = document.getElementById("preview");
+
+
+function Preview() {
+    color = document.querySelector('input[name="colors"]:checked').value;
+    
+    console.log("The color is " + color);
+    
+    preview.style.background = color;
+}
+
+
+function changeColor() {
+    console.log("The color is: " + color);
+    
+    document.body.style.background = color;
+}
+
+changeBtn.onclick = function() {
+    modal.style.display = "grid";
+}
+
+
+function Close () {
+    modal.style.display = "none";
+    
+    preview.style.background = "#1a1a1a";
+    
+    document.querySelector('input[name="colors"]:checked').checked = false;
+}
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.background = "#1a1a1a";
+        
+        document.querySelector('input[name="colors"]:checked').checked = false;
+    }
+}
+    
+    </script>
+    
+    
 </body>
 
 
