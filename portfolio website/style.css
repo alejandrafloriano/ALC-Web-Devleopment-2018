@@ -46,6 +46,12 @@ nav ul li a:hover{
     background-color: #0062c1;
 }
 
+div#container{
+    max-width: 1024px;
+    max-height: 100%;
+    color: darkblue;
+}
+
 h1#home-title{
     color: #003367;
 }
