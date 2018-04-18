@@ -1,6 +1,13 @@
 body{
-    background-color: #c9e4ff;
+    background-color: #003367;
 }
+
+ /* Colors
+#c9e4ff
+#52aaff
+#a1d0ff
+#0062c1
+#003367 */
 
 
 nav{
@@ -46,18 +53,47 @@ nav ul li a:hover{
     background-color: #0062c1;
 }
 
-div#container{
+div.container{
+    display: flex;
+    flex-flow: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #c9e4ff;
     max-width: 1024px;
+    width: 80%;
+    margin: auto;
+    padding: 20px;
     max-height: 100%;
-    color: darkblue;
 }
 
 h1#home-title{
     color: #003367;
+    text-decoration: underline;
+    font-family:'Poiret One', sans-serif;
 }
 
 p#home-text1{
     color: #003367;
+}
+
+h1#about-title{
+    text-decoration: underline;
+    font-family:'Poiret One', sans-serif;
+}
+
+h1#work-title{
+    text-decoration: underline;
+    font-family:'Poiret One', sans-serif;
+}
+
+h1#contact-title{
+    text-decoration: underline;
+    font-family:'Poiret One', sans-serif;
+}
+
+h1#saw-title{
+    text-decoration: underline;
+    font-family:'Poiret One', sans-serif;
 }
 
 figure{
