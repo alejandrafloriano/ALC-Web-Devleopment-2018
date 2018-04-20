@@ -11,14 +11,14 @@ body{
 
 
 nav{
-    width:100%;
+    max-width:1024px;
     background-color:#52aaff;
     clear:both;
     margin:0;
     color:white;
     font-family:'Poiret One', sans-serif;
     font-size: 17px;
-    border: dashed 5px white;
+    border:2px solid white;
 }
 
 nav ul{
@@ -26,6 +26,7 @@ nav ul{
     padding:0;
     list-style: none;
     overflow:hidden;
+    text-align: center;
 }
 
 nav ul li{
@@ -96,8 +97,17 @@ h1#saw-title{
     font-family:'Poiret One', sans-serif;
 }
 
+p{
+    font-family:'Muli', sans-serif;
+}
+
+input{
+    width: 200px;
+    height: 30px;
+}
+
 figure{
-width:257px;
+    width:257px;
     float:left;
     background-color: ghostwhite;
     box-shadow:1px 1px 10px black;
