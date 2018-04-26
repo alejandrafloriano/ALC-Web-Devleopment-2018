@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Media Queries</title>
+    <picture>
+        <source media="(min-width: 900px)" srcset="images/smd.jpg">
+        <source media="(min-width: 600px)" srcset="images/smd.jpg">
+<img class="img1" src="images/smd.jpg">
+    </picture>
+<style type="text/css">
+    body {
+        background-color: firebrick;
+    }
+    
+    img.img1{
+        width: 155px;
+        height: 200px;
+    }
+    
+    @media screen and (max-width: 992px) {
+        body {
+            background-color: lightskyblue;
+        }
+        
+    img.img1{
+        width: 155px;
+        height: 200px;
+        }
+    }
+    
+    @media screen and (max-width: 600px) {
+        body {
+            background-color: yellow;
+        }
+    }
+    </style>
+</head>
+</html>
