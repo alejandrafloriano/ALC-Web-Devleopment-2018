@@ -75,6 +75,7 @@ h1#home-title{
 
 p#home-text1{
     color: #003367;
+    float: left;
 }
 
 h1#about-title{
@@ -128,7 +129,6 @@ figure{
     margin: 20px 15px;
     border: outset #0062c1;
     opacity: 0.75;
-    cursor: pointer;
 } 
 
 figure:hover {
@@ -153,13 +153,12 @@ figcaption{
     font-size: 18px;
 }
 
-#myImg{
-    border-radius: 5px;
+.myImg{
     cursor: pointer;
     transition: 0.3s;
 }
 
-#myImg:hover{
+.myImg:hover{
     opacity: 0.5;
 }
 
@@ -184,7 +183,7 @@ figcaption{
     max-width: 700px;
 }
 
-#caption{
+.caption{
     margin: auto;
     display: block;
     width: 80%;
@@ -196,7 +195,7 @@ figcaption{
     font-family: 'Poiret One', sans-serif;
 }
 
-.modal-content, #caption{
+.modal-content, .caption{
     -webkit-animation-name: zoom;
     -webkit-animation-duration: 0.6s;
     animation-name: zoom;
@@ -248,3 +247,8 @@ img#flintheartandscrooge{
     border: 10px dashed white;
 }
 
+@media screen and (max-width: 600px) {
+        nav {
+            background-color: darkseagreen;
+        }
+    }
