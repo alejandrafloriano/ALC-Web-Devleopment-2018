@@ -106,29 +106,35 @@ input{
     height: 30px;
 }
 
+footer{
+    width: 100%;
+    padding: 10px;
+    background-color: #52aaff;
+    /*border-radius: 5px;*/
+    color: white;
+    max-width:1024px;
+    border:2px solid white;
+    margin: 0;
+}
+
 figure{
-    width:250px;
-    float:left;
+    width: 250px;
+    float: left;
+    align-content: center;
     background-color: ghostwhite;
-    box-shadow:1px 1px 10px black;
+    box-shadow: 1px 1px 10px black;
     background: -moz-linear-gradient(#ffffff, #a1d0ff); /* For Firefox 3.6 to 15 */
     background: linear-gradient(#ffffff, #a1d0ff); /* Standard syntax */
-    margin: 5px 15px;
+    margin: 20px 15px;
     border: outset #0062c1;
-    opacity: 1;
-    
-    -webkit-transition: width 0.5s; /* For Safari 3.1 to 6.0 */
-    transition: width 0.5s;
+    opacity: 0.75;
+    cursor: pointer;
 } 
 
 figure:hover {
-    background: aliceblue;
-    width: 255px; 
+    background: aliceblue; 
     opacity: 1;
-    
     box-shadow:1px 1px 10px black;
-        -webkit-transform: translateX(0px);
-        transform: translateX(0px);
 }
 
 figure img{
@@ -136,7 +142,7 @@ figure img{
     width:150px;
     height: 150px;
     margin:20px auto;
-    border:5px dashed #0062c1;
+    border:3px inset #0062c1;
 }
 
 figcaption{
@@ -187,6 +193,7 @@ figcaption{
     color: #ccc;
     padding: 10px 0;
     height: 150px;
+    font-family: 'Poiret One', sans-serif;
 }
 
 .modal-content, #caption{
