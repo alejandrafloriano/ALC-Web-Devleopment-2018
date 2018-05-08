@@ -153,12 +153,12 @@ figcaption{
     font-size: 18px;
 }
 
-.myImg{
+#myImg{
     cursor: pointer;
     transition: 0.3s;
 }
 
-.myImg:hover{
+#myImg:hover{
     opacity: 0.5;
 }
 
@@ -183,7 +183,7 @@ figcaption{
     max-width: 700px;
 }
 
-.caption{
+#caption{
     margin: auto;
     display: block;
     width: 80%;
@@ -195,7 +195,7 @@ figcaption{
     font-family: 'Poiret One', sans-serif;
 }
 
-.modal-content, .caption{
+.modal-content, #caption{
     -webkit-animation-name: zoom;
     -webkit-animation-duration: 0.6s;
     animation-name: zoom;
@@ -252,3 +252,96 @@ img#flintheartandscrooge{
             background-color: darkseagreen;
         }
     }
+
+
+/* lightbox */ 
+
+* {
+    box-sizing: border-box;
+}
+
+.row > .column {
+    padding: 0 8px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+    width: 25%;
+}
+
+.mySlides {
+    display: none;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 0 3px 3px 0;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rbga(0,0,0,0.8);
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+img{
+    margin-bottom: -4px;
+}
+
+.caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+}
+
+.demo {
+    opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
+}
+
+img.hover-shadow{
+    transition: 0.3s;
+}
+
+.hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
